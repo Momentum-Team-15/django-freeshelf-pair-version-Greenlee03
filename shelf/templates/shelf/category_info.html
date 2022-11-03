@@ -1,13 +1,10 @@
-{% extends 'base.html' %}
+<!-- {% extends 'base.html'}
 {% block content %}
 
-<hr>
-<h1>Welcome to Team No Sleep's (aka Team Conga) Resource Library!</h1>
-
 <header>
-    <h2>Categories: </h2>
-    {% for category in categories %}
-        <a href="{% url 'category_resources' category.slug %}">{{ category }}</a>
+    <h1>Resources in the Category {{ category }}</h1>
+    {% for category in categorys %}
+        <p><a href="{% url 'category_info' category.slug %}">{{ category }}</a></p>
     {% endfor %}
 </header>
 
@@ -25,4 +22,7 @@
         </div>
     </div>
     {% endfor %}
-{% endblock %}
+
+{{ resource }}
+{% endfor %}
+{% endblock %} -->

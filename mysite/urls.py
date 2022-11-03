@@ -21,5 +21,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('registration.backends.simple.urls')),
     path('', views.index, name='home'),
-    
+    path('shelf/<int:pk>', views.resource_info, name='resource_info'),
+    path('favorite/new/<int:res_pk>', views.add_favorite, name='favorite'),
+    path('favorite', views.favorites_page, name='favorites_page'),
+    path('accounts/login/', views.login, name='login'),
+    path('accounts/logout/', views.logout, name='logout'),
+    path('category/<slug:slug>', views.category, name='category_resources'),
+    # path('resource/<int:pk>/delete', views.delete_resource, name='delete_resource'),
 ]
